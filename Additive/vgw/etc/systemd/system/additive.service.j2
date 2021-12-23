@@ -1,0 +1,11 @@
+[Unit]
+Description = {{ description }}
+After = network.target
+
+[Service]
+Type = oneshot
+User = root
+ExecStart = /bin/sh /usr/bin/additive.sh 
+
+[Install]
+WantedBy = multi-user.target
